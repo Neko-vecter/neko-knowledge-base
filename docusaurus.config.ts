@@ -66,7 +66,7 @@ const config: Config = {
       respectPrefersColorScheme: true,
     },
     navbar: {
-      title: 'Neko knowledge base',
+      title: 'Neko Knowledge Base',
       // logo: {
       //   alt: 'My Site Logo',
       //   src: 'img/logo.svg',
@@ -77,6 +77,12 @@ const config: Config = {
           sidebarId: 'mainSidebar',
           position: 'left',
           label: 'Main Docs',
+        },
+        {
+          type: 'docSidebar',
+          sidebarId: 'projectSidebar',
+          position: 'left',
+          label: 'Project',
         },
         {to: '/blog', label: 'Blog', position: 'left'},
         {
@@ -95,6 +101,10 @@ const config: Config = {
             {
               label: 'Main Docs',
               to: '/docs/intro',
+            },
+            {
+              label: 'Project',
+              to: '/docs/project',
             },
           ],
         },
