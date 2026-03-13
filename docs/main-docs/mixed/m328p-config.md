@@ -24,7 +24,18 @@ ATmega328P 的 Low Fuse Byte（低位熔丝字节）一共有 8 个 bit（bit7 -
 
 ### High Fuse
 
-TODO
+ATmega328P 的 High Fuse Byte（高位熔丝字节）一共有 8 个 bit（bit7 - bit0），主要控制 Bootloader 大小 / 启动方式 / SPI 烧录使能 / EEPROM 保存等功能。
+
+| Bit           | bit7     | bit6 | bit5  | bit4  | bit3   | bit2    | bit1    | bit0    |
+| ------------- | -------- | ---- | ----- | ----- | ------ | ------- | ------- | ------- |
+| Fuse Bit Name | RSTDISBL | DWEN | SPIEN | WDTON | EESAVE | BOOTSZ1 | BOOTSZ0 | BOOTRST |
+| Default Value | 1        | 1    | 0     | 1     | 1      | 1       | 1       | 1       |
+
+:::warning
+
+错误的配置 `SPIEN` 会导致无法写入
+
+:::
 
 ### Extended Fuse
 
