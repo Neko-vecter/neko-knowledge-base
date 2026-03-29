@@ -15,7 +15,7 @@ make clean
 make menuconfig
 ```
 
-![h723](img/octopus-pro-f446-can-main.png)
+<ImageView src={require('./img/octopus-pro-f446-can-main.png').default} width="100%"/>
 
 #### Compile Firmware
 
