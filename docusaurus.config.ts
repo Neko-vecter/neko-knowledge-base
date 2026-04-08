@@ -12,6 +12,7 @@ const config: Config = {
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
     v4: true, // Improve compatibility with the upcoming Docusaurus v4
+    faster: true,
   },
 
   // Set the production url of your site here
@@ -35,6 +36,18 @@ const config: Config = {
     locales: ['en'],
   },
 
+  markdown: {
+    hooks: {
+      onBrokenMarkdownLinks: 'warn',
+    },
+    format: 'mdx',
+    mdx1Compat: {
+        comments: false,
+        admonitions: false,
+        headingIds: false,
+    }
+  },
+  
   presets: [
     [
       'classic',
