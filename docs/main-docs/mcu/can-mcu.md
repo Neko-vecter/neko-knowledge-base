@@ -5,4 +5,4 @@ description: Klipper CAN mcu
 
 # CAN MCU
 
-[Config Linux CAN Network](../host/config-linux-can-network.md) before move on.
+在开始之前需要先完成 [配置 linux CAN 网络 (Systemd-Network)](../host/config-linux-can-network-systemd.md)

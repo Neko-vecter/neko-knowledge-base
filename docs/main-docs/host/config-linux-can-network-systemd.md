@@ -5,6 +5,12 @@ description: Config linux CAN Network (systemd)
 
 # 使用 systemd-networkd 管理 CAN Network
 
+:::info
+
+Debian 13 之前的版本建议使用 [配置 Linux CAN Network (ifupdown)](./config-linux-can-network.md)
+
+:::
+
 ### 添加 `can.network` 配置文件
 
 ``` shell
