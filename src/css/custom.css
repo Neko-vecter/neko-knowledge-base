@@ -6,7 +6,7 @@
 
 /* You can override the default Infima variables here. */
 :root {
-    --ifm-color-primary: #25c2a0;
+    --ifm-color-primary: #06a583;
     --ifm-color-primary-dark: #21af90;
     --ifm-color-primary-darker: #1fa588;
     --ifm-color-primary-darkest: #1a8870;
@@ -15,26 +15,6 @@
     --ifm-color-primary-lightest: #23b898;
     --ifm-code-font-size: 95%;
     --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
-}
-
-[data-theme="light"] {
-    --ifm-background-color: rgb(245, 245, 247);
-    .navbar {
-        background-color: #0c0c0c;
-        --ifm-navbar-link-color: #ffffff;
-    }
-
-    .navbar__items .clean-btn {
-        color: #ffffff;
-    }
-
-    .navbar__items .clean-btn:hover {
-        background-color: #009a9c;
-    }
-
-    .footer {
-        background-color: #0c0c0c;
-    }
 }
 
 [data-theme="dark"] {
@@ -48,13 +28,50 @@
     --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
 
+/* extra color config */
+
+:root {
+    .navbar-sidebar__brand {
+        background-color: #0c0c0c;
+    }
+
+    .toggleButton_gllP:hover {
+        background-color: #393939;
+    }
+
+    .navbar__toggle {
+        color: #ffffff;
+    }
+    
+    .navbar__toggle:hover {
+        color: var(--ifm-color-primary);
+    }
+
+    .navbar-sidebar__close:hover {
+        --ifm-color-emphasis-600: var(--ifm-color-primary);
+    }
+}
+
+[data-theme="light"] {
+    --ifm-background-color: rgb(245, 245, 247);
+    .navbar {
+        background-color: #0c0c0c;
+        --ifm-navbar-link-color: #ffffff;
+    }
+
+    .toggleButton_gllP {
+        color: #dcdcdc;
+    }
+
+    .footer {
+        background-color: #0c0c0c;
+    }
+}
+
 [data-theme="dark"] {
     --ifm-background-color: #0f0f0f;
     .navbar {
         background-color: #0c0c0c;
-    }
-    .navbar__items .clean-btn:hover {
-        background-color: #009a9c;
     }
 
     .footer {
