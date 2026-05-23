@@ -1,5 +1,5 @@
 ---
-sidebar_position: 1
+sidebar_position: 10
 description: Moonraker Mirror Toolkit
 ---
 
@@ -89,9 +89,9 @@ size_pattern = "Total size is ([0-9\\.]+[KMGTP]?)"
 interval = 720
 ```
 
-### Sync mirror
+#### Sync mirror
 
-在开始mirror 后会在 tunasync 的 working-dir 下创建以下结构的目录
+在开始 mirror 后会在 tunasync 的 working-dir 下创建以下结构的目录
 
 ```
 LatestRelease/
@@ -117,6 +117,28 @@ v2.17.0/
 }
 ```
 
+### 配置 git repo 部分
+
+在 tunasync worker 配置文件添加以下部分
+
+```toml title="worker.conf"
+[[mirrors]]
+name = "klipper.git"
+provider = "command"
+command = "/path/mmt/git-repo.sh -b master"
+upstream = "https://github.com/Klipper3d/klipper.git"
+size_pattern = "Total size is ([0-9.]+[KMGTP]?)"
+interval = 720
+
+[[mirrors]]
+name = "moonraker.git"
+provider = "command"
+command = "/path/mmt/git-repo.sh -b master"
+upstream = "https://github.com/Neko-vecter/moonraker.git"
+size_pattern = "Total size is ([0-9.]+[KMGTP]?)"
+interval = 720
+```
+
 ## 使用镜像更新
 
 :::info
@@ -127,7 +149,27 @@ v2.17.0/
 
 :::
 
-在 moonraker.conf 中配置
+配置 git repo 的上游同步地址
+
+:::info
+
+在第一次配置的时候需要使用 ssh 手动设置 moonraker 的 origin 为可以使用 mirror 的版本
+
+后续在 mirror 之间切换可以直接使用配置文件进行更改。保存后会自动检查 origin 并且自动 `git remote set-url origin` 到配置文件的地址
+
+:::
+
+```
+[update_manager klipper]
+dev_mode: True
+origin: https://<mirror>/klipper.git
+
+[update_manager moonraker]
+dev_mode: True
+origin: https://<mirror>/moonraker.git
+```
+
+配置 webui 的上游同步地址
 
 ```
 [update_manager mainsail]
@@ -144,4 +186,4 @@ mirror_tag_template: {base_url}/{tag}/release
 
 ## TODO
 
-- [ ] 增加 Moonraker / Klipper 等 git 仓库的镜像
+- [x] 增加 Moonraker / Klipper 等 git 仓库的镜像
