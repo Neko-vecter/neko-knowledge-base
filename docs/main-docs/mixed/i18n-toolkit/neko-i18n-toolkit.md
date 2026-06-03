@@ -3,7 +3,7 @@ sidebar_position: 2
 description: i18n toolkit AST 拆分合并工具
 ---
 
-# Meow i18n toolkit
+# Neko i18n toolkit
 
 针对 docusaurus 设计的持续本地化工具。
 
