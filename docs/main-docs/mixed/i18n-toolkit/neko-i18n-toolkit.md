@@ -7,6 +7,12 @@ description: i18n toolkit AST 拆分合并工具
 
 针对 docusaurus 设计的持续本地化工具。
 
+:::info
+
+[Neko-vecter/neko-i18n-toolkit](https://github.com/Neko-vecter/neko-i18n-toolkit)
+
+:::
+
 ## 初始化工具 venv
 
 TODO
