@@ -17,8 +17,8 @@ Moonraker Mirror Toolkit 是一个基于 tunasync 框架构建的本地镜像服
 
 可以镜像的内容包括:
 
-- Moonraker (todo)
-- Klipper (todo)
+- Moonraker
+- Klipper
 - Mainsail
 - Fluidd
 
