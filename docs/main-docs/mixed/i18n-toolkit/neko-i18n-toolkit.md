@@ -13,27 +13,16 @@ description: i18n toolkit AST 拆分合并工具
 
 :::
 
-## 初始化工具 venv
+## CLI
 
-TODO
-
-## 构建中间格式
+### 构建 middleware 文件
 
 ```shell
-<path_to_venv>/python3 <path_to_tool>/src/build_middleware.py
+python3 <path_to>/build_file_middleware.py -i docs/<path_to_file_1> docs/<path_to_file_2>
 ```
 
-这会在项目目录中创建缓存文件以及toml格式的中间文件。
-
-## 构建翻译后的 mdx 文件
-
-当翻译完成后使用以下命令构建翻译文件
+### 构建 mdx 文件
 
 ```shell
-<path_to_venv>/python3 <path_to_tool>/src/sync_to_i18n.py
+python3 <path_to>/build_file_i18n.py -i docs/<path_to_file_1> docs/<path_to_file_2>
 ```
-
-## TODO
-
-- [ ] 增加启动参数
-- [ ] 增加初始化 venv 工具
