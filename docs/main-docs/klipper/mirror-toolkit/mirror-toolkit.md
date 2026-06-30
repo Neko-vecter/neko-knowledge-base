@@ -180,8 +180,8 @@ path: ~/mainsail
 
 enable_mirror: True
 mirror_url: https://<mirror>/mainsail-release/
-mirror_latest_template: {base_url}/LatestRelease/release
-mirror_tag_template: {base_url}/{tag}/release
+mirror_latest_template: LatestRelease/release
+mirror_tag_template: {tag}/release
 ```
 
 ## TODO
