@@ -133,6 +133,10 @@ const config: Config = {
               label: 'Neko-vecter',
               href: 'https://github.com/Neko-vecter',
             },
+            {
+              label: 'NekoArchive | Project Git',
+              href: 'https://git.nekovecter.com/'
+            }
           ],
         },
         {
