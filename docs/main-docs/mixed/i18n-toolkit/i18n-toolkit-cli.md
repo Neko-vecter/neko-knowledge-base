@@ -1,17 +1,17 @@
 ---
 sidebar_position: 2
-description: i18n toolkit AST 拆分合并工具
+description: i18n toolkit AST CLI Command
 ---
 
-# Neko i18n toolkit
-
-针对 docusaurus 设计的持续本地化工具。
+# Neko i18n toolkit CLI
 
 :::info
 
 [Neko-vecter/neko-i18n-toolkit](https://github.com/Neko-vecter/neko-i18n-toolkit)
 
 :::
+
+Cli i18n 工作流
 
 ## CLI
 
