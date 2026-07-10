@@ -154,7 +154,7 @@ const config: Config = {
     prism: {
       theme: custom_code_themes,
       darkTheme: custom_code_themes,
-      additionalLanguages: ['bash','systemd'],
+      additionalLanguages: ['bash','systemd','toml'],
     },
   } satisfies Preset.ThemeConfig,
 };
