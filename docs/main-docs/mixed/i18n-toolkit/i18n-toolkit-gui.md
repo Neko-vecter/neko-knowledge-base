@@ -44,7 +44,7 @@ rebuild workflow 中默认会自动引用原始文档的图片。
 
 :::info
 
-- `[metadata]` 暂时无定义实际内容
+- `[metadata]` 暂时没有定义实际内容
 
 :::
 
