@@ -1,6 +1,6 @@
 /* include css */
 
-@import 'katex/dist/katex.min.css';
+@import "katex/dist/katex.min.css";
 
 /* theme config */
 
@@ -41,7 +41,7 @@
     .navbar__toggle {
         color: #ffffff;
     }
-    
+
     .navbar__toggle:hover {
         color: var(--ifm-color-primary);
     }
@@ -49,10 +49,58 @@
     .navbar-sidebar__close:hover {
         --ifm-color-emphasis-600: var(--ifm-color-primary);
     }
+
+    .navbar {
+        background-color: #0c0c0c;
+    }
+
+    .footer {
+        background-color: #0c0c0c;
+    }
+
+    --neko-card-color: rgb(241, 241, 241);
+    --neko-card-color-border: rgba(204, 204, 204, 0.5);
+
+    .theme-doc-card-container {
+        background-color: var(--neko-card-color);
+        box-shadow: none;
+        border: 1px solid var(--neko-card-color-border);
+    }
+
+    .theme-doc-card-container:hover {
+        border-color: var(--ifm-color-primary);
+    }
+
+    .theme-code-block,
+    .theme-code-block pre {
+        background-color: rgb(25, 25, 25) !important;
+    }
+
+    .theme-code-block {
+        border: 1px solid rgba(102, 102, 102, 0.2);
+        border-radius: 0.8125rem;
+    }
+
+    .theme-code-block div pre {
+        border-radius: 0.8125rem;
+    }
+
+    .codeBlockTitle_OeMC {
+        background-color: rgb(20, 20, 20);
+    }
+
+    .pagination-nav a {
+        border-radius: 0.8125rem;
+        border: 1px solid var(--neko-card-color-border);
+    }
+
+    .pagination-nav a:hover {
+        border-color: var(--ifm-color-primary);
+    }
 }
 
 [data-theme="light"] {
-    --ifm-background-color: rgb(245, 245, 247);
+    --ifm-background-color: rgb(245, 245, 245);
     .navbar {
         background-color: #0c0c0c;
         --ifm-navbar-link-color: #ffffff;
@@ -61,19 +109,10 @@
     .toggleButton_gllP {
         color: #dcdcdc;
     }
-
-    .footer {
-        background-color: #0c0c0c;
-    }
 }
 
 [data-theme="dark"] {
     --ifm-background-color: #0f0f0f;
-    .navbar {
-        background-color: #0c0c0c;
-    }
-
-    .footer {
-        background-color: #0c0c0c;
-    }
+    --neko-card-color: rgb(25, 25, 25);
+    --neko-card-color-border: rgba(102, 102, 102, 0.2);
 }
