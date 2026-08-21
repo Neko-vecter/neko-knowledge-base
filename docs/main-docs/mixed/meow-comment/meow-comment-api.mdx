@@ -1,0 +1,73 @@
+---
+sidebar_position: 2
+description: Meow comment API
+---
+
+# Meow Comment API
+
+## 获取验证码
+
+### `GET /api/verification`
+
+Response samples
+
+```json
+{
+    "uuid": "verification UUID",
+    "captcha_base64": "captcha Base64"
+}
+```
+
+## 提交评论
+
+### `POST /api/comment`
+
+Payload
+
+```json
+{
+    "username": "username",
+    "email": "email",
+    "comments": "comments",
+    "source_path": "/page/xxx",
+    "page_title": "page title",
+    "verification_uuid": "verification UUID",
+    "verification_code": "verification code"
+}
+```
+
+Response samples
+
+```json
+{
+    "ok": true
+}
+```
+
+## RSS
+
+### `GET /api/rss?token=rss_token`
+
+Response samples
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+    <channel>
+        <title>Meow Comment RSS</title>
+        <link>https://site_url</link>
+        <description>Meow</description>
+        <item>
+            <title>username | page title</title>
+            <pubDate>评论日期 UTC 时区</pubDate>
+            <description><![CDATA[
+                /page/xxx
+                <br />
+                username | username@example.com
+                <br />
+                评论主体内容
+            ]]></description>
+        </item>
+    </channel>
+</rss>
+```

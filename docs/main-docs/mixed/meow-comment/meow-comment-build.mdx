@@ -1,0 +1,34 @@
+---
+sidebar_position: 2
+description: Meow comment Build
+---
+
+# Meow Comment Build
+
+## backend
+
+require package
+
+- git
+- golang-go
+- dpkg
+- coreutils
+
+```shell
+bash ./backend/deploy/build.sh
+```
+
+## frontend package
+
+require package
+
+- nodejs v24 - v26
+- corepack
+- yarn v4
+
+```shell
+cd ./package/meow-comment-ui
+yarn install
+yarn build
+npm pack
+```
