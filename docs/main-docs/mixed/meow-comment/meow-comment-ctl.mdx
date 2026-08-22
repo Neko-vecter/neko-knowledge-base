@@ -1,0 +1,41 @@
+---
+sidebar_position: 2
+description: Meow CommentCTL
+---
+
+# Meow CommentCTL
+
+Command Reference
+
+## Create RSS token
+
+```shell
+sudo meow-commentctl token create \
+    --config /opt/meow-comment/config.json \
+    --name blog
+```
+
+## List RSS token
+
+```shell
+sudo meow-commentctl token list \
+    --config /opt/meow-comment/config.json
+```
+
+## Delete RSS token
+
+Delete RSS token use token name
+
+```shell
+sudo meow-commentctl token delete \
+    --config /opt/meow-comment/config.json \
+    --name blog
+```
+
+Delete RSS token use token id
+
+```shell
+sudo meow-commentctl token delete \
+    --config /opt/meow-comment/config.json \
+    --id TOKEN_ID
+```
