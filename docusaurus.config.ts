@@ -136,7 +136,11 @@ const config: Config = {
             {
               label: 'NekoArchive | Project Git',
               href: 'https://git.nekovecter.com/'
-            }
+            },
+            {
+              label: 'Math Note',
+              href: 'https://math.nekovecter.com/docs',
+            },
           ],
         },
         {
