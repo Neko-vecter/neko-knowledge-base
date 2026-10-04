@@ -18,11 +18,19 @@ Cli i18n 工作流
 ### 构建 middleware 文件
 
 ```shell
-python3 <path_to>/build_file_middleware.py --lang <lang> -i docs/<path_to_file_1> docs/<path_to_file_2>
+pnpm i18n-toolkit extract --lang <lang> -i docs/<path_to_file_1> docs/<path_to_file_2>
 ```
 
 ### 构建 mdx 文件
 
 ```shell
-python3 <path_to>/build_file_i18n.py --lang <lang> -i docs/<path_to_file_1> docs/<path_to_file_2>
+pnpm i18n-toolkit build --lang <lang> -i docs/<path_to_file_1> docs/<path_to_file_2>
+```
+
+### Sync
+
+`sync` 是先 `extract` 然后 `build` 文件
+
+```shell
+pnpm i18n-toolkit sync --lang <lang> -i docs/<path_to_file_1> docs/<path_to_file_2>
 ```

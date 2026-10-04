@@ -1,0 +1,29 @@
+---
+sidebar_position: 3
+description: i18n toolkit AST API Library
+---
+
+# Library API
+
+This is example use this project as package
+
+```tsx
+import {
+    buildDocument,
+    createMiddleware,
+    extractBlocks,
+    parseDocument,
+    writeMiddleware,
+} from 'i18n-toolkit';
+
+const parsed = parseDocument(markdown, 'docs/guide.md');
+const blocks = extractBlocks(parsed);
+const middleware = await createMiddleware({
+    source: markdown,
+    documentPath: 'docs/guide.md',
+    targetLanguage: 'en',
+});
+
+writeMiddleware('i18n/en/guide.toml', middleware);
+const translated = buildDocument(markdown, { middleware });
+```
