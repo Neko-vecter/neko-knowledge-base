@@ -9,9 +9,15 @@ description: i18n toolkit AST CLI Command
 
 [Neko-vecter/neko-i18n-toolkit](https://github.com/Neko-vecter/neko-i18n-toolkit)
 
+[npm package @neko_vecter/i18n-toolkit](https://www.npmjs.com/package/@neko_vecter/i18n-toolkit)
+
 :::
 
-Cli i18n 工作流
+## Add Package
+
+```shell
+pnpm add -D @neko_vecter/i18n-toolkit
+```
 
 ## CLI
 
@@ -29,7 +35,7 @@ pnpm i18n-toolkit build --lang <lang> -i docs/<path_to_file_1> docs/<path_to_fil
 
 ### Sync
 
-`sync` 是先 `extract` 然后 `build` 文件
+`sync` command 会先 `extract` 然后 `build` 文件
 
 ```shell
 pnpm i18n-toolkit sync --lang <lang> -i docs/<path_to_file_1> docs/<path_to_file_2>
